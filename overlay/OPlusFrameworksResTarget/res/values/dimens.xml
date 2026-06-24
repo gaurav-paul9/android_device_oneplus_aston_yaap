@@ -15,4 +15,7 @@
 
     <!-- Default radius of the software rounded corners. -->
     <dimen name="rounded_corner_radius">34dp</dimen>
+
+    <!-- Pushes QS tiles below camera punch hole -->
+    <dimen name="quick_qs_offset_height">48dp</dimen>
 </resources>
