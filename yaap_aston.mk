@@ -14,6 +14,9 @@ $(call inherit-product, device/oneplus/aston/device.mk)
 # Inherit some common YAAP stuff.
 $(call inherit-product, vendor/yaap/config/common_full_phone.mk)
 
+# BCR
+$(call inherit-product, vendor/bcr/bcr.mk)
+
 # YAAP specific flags
 TARGET_ENABLE_BLUR := true
 TARGET_EXCLUDES_AUDIOFX := true
