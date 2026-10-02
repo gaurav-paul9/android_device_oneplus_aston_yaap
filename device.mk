@@ -29,6 +29,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SYSTEM_PROPERTIES += \
     sys.brightness.disable_gamma_conversion=true
 
+$(call soong_config_set_bool,surfaceflinger,supports_oplus_adfr,true)
 $(call soong_config_set_bool,qtidisplay,pxlw_hw_iris7,true)
 
 # IR
@@ -92,6 +93,9 @@ $(call soong_config_set_bool,OPLUS_LINEAGE_VIBRATOR_HAL,USE_EFFECT_STREAM,true)
 # Inherit from the common OEM chipset makefile.
 $(call inherit-product, device/oneplus/sm8550-common/common.mk)
 
+# OplusParts
+$(call inherit-product, packages/apps/OplusParts/oplusparts.mk)
+
 # Inherit from the proprietary files makefile.
 $(call inherit-product, vendor/oneplus/aston/aston-vendor.mk)
 
@@ -105,3 +109,5 @@ PRODUCT_PACKAGES += \
 
 # OPLUS Fusion Light Sensor
 $(call inherit-product-if-exists, vendor/oneplus/fusion/fusion-vendor.mk)
+
+PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
