@@ -30,6 +30,7 @@ PRODUCT_SYSTEM_PROPERTIES += \
     sys.brightness.disable_gamma_conversion=true
 
 $(call soong_config_set_bool,surfaceflinger,supports_oplus_adfr,true)
+$(call soong_config_set_bool,surfaceflinger,arr_use_oplus_ltpo_rates,true)
 $(call soong_config_set_bool,qtidisplay,pxlw_hw_iris7,true)
 
 # IR
