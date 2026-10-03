@@ -32,6 +32,10 @@ PRODUCT_SYSTEM_PROPERTIES += \
 $(call soong_config_set_bool,surfaceflinger,supports_oplus_adfr,true)
 $(call soong_config_set_bool,surfaceflinger,arr_use_oplus_ltpo_rates,true)
 
+# Pixelworks
+$(call soong_config_set,qtidisplay,sm8550_pxlw_vendor_namespace,vendor/oneplus/aston)
+$(call soong_config_set_bool,qtidisplay,sm8550_pxlw_hw_iris7,true)
+
 # IR
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.consumerir.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/android.hardware.consumerir.xml
