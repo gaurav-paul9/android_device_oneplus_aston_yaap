@@ -31,7 +31,6 @@ PRODUCT_SYSTEM_PROPERTIES += \
 
 $(call soong_config_set_bool,surfaceflinger,supports_oplus_adfr,true)
 $(call soong_config_set_bool,surfaceflinger,arr_use_oplus_ltpo_rates,true)
-$(call soong_config_set_bool,qtidisplay,pxlw_hw_iris7,true)
 
 # IR
 PRODUCT_COPY_FILES += \
@@ -41,7 +40,7 @@ PRODUCT_PACKAGES += \
     android.hardware.ir-service.oplus
 
 # Fingerprint
-$(call soong_config_set,surfaceflinger,udfps_lib,//hardware/oplus:libudfps_extension.oplus)
+# Note: SurfaceFlinger UDFPS lib is defined via TARGET_SURFACEFLINGER_UDFPS_LIB in BoardConfigCommon.mk
 $(call soong_config_set_bool,qtidisplay,oplus_udfps,true)
 
 # Overlays
